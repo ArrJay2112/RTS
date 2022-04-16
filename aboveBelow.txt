@@ -1,0 +1,27 @@
+//Class to return the number of elements in an array that are either
+//above or below a given number
+//
+//Rob Spellman
+//4/16/22
+
+class aboveBelow{
+    getaboveBelow(arr,n){
+        let numAbove = 0;
+        let numBelow = 0;
+
+        //Check each element
+        for (let j=0; j<arr.length; j++) {
+            if ((arr[j] > n) && !Number.isNaN(arr[j])){
+                numAbove++;
+            }
+            if ((arr[j] < n) && !Number.isNaN(arr[j])){
+                numBelow++;
+            }
+        }
+
+        //Set output
+        let counts = { below: numBelow,
+                       above: numAbove };
+        return counts;
+    }
+}
