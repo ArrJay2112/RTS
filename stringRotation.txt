@@ -9,7 +9,7 @@ class stringRotation{
       let last = str.length;
 
       //Get parts of String before and after 'n' and concat
-      let newString = str.ubstring(str.length-n) + str.substring(0,str.length-n);
+      let newString = str.substring(str.length-n) + str.substring(0,str.length-n);
 
       return newString;
     }
